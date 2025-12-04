@@ -1,0 +1,33 @@
+{
+  "name": "com.aminhp.comfyui-bridge",
+  "version": "0.1.0",
+  "displayName": "Unity ComfyUI Bridge",
+  "description": "A runtime bridge connecting Unity to ComfyUI. Execute workflows for Image, Audio, and 3D Model generation with support for RenderTextures and a non-blocking queue system.",
+  "unity": "2021.3",
+  "documentationUrl": "https://github.com/Amin-HP/Unity-ComfyUI-Bridge/blob/main/Documentation/README.md",
+  "changelogUrl": "https://github.com/Amin-HP/Unity-ComfyUI-Bridge/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/Amin-HP/Unity-ComfyUI-Bridge/blob/main/LICENSE",
+  "keywords": [
+    "comfyui",
+    "ai",
+    "generative",
+    "stable-diffusion",
+    "runtime"
+  ],
+  "author": {
+    "name": "AminHP",
+    "email": "hi@aminhp.com",
+    "url": "https://aminhp.com"
+  },
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.2",
+    "com.unity.cloud.gltfast": "6.14.1"
+  },
+  "samples": [
+    {
+      "displayName": "Comprehensive Examples",
+      "description": "Scenes demonstrating Text-to-Image, Image-to-Image, 3D Model and Audio generation, as well as Multi-Run Queueing and runtime parameter modification.",
+      "path": "Samples"
+    }
+  ]
+}
