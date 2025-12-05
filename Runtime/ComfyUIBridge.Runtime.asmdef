@@ -1,0 +1,17 @@
+{
+    "name": "ComfyUIBridge.Runtime",
+    "rootNamespace": "ComfyUIBridge",
+    "references": [
+        "glTFast",
+        "newtonsoft-json"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
