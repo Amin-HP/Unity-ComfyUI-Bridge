@@ -25,7 +25,7 @@
   },
   "samples": [
     {
-      "displayName": "Comprehensive Examples",
+      "displayName": "Examples",
       "description": "Scenes demonstrating Text-to-Image, Image-to-Image, 3D Model and Audio generation, as well as Multi-Run Queueing and runtime parameter modification.",
       "path": "Samples~"
     }
