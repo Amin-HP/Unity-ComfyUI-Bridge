@@ -4,7 +4,7 @@
   "displayName": "Unity ComfyUI Bridge",
   "description": "A runtime bridge connecting Unity to ComfyUI. Execute workflows for Image, Audio, and 3D Model generation with support for RenderTextures and a non-blocking queue system.",
   "unity": "2021.3",
-  "documentationUrl": "https://github.com/Amin-HP/Unity-ComfyUI-Bridge/blob/main/Documentation/README.md",
+  "documentationUrl": "https://github.com/Amin-HP/Unity-ComfyUI-Bridge/blob/main/Documentation/Readme.md",
   "changelogUrl": "https://github.com/Amin-HP/Unity-ComfyUI-Bridge/blob/main/CHANGELOG.md",
   "licensesUrl": "https://github.com/Amin-HP/Unity-ComfyUI-Bridge/blob/main/LICENSE",
   "keywords": [
