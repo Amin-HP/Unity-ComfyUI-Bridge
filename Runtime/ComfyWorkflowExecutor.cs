@@ -78,14 +78,37 @@ namespace ComfyUIBridge
 
         public void LoadWorkflow()
         {
+            StartCoroutine(LoadWorkflowRoutine());
+        }
+
+        private IEnumerator LoadWorkflowRoutine()
+        {
             string path = Path.Combine(Application.streamingAssetsPath, "Workflows", workflowFileName);
-            if (File.Exists(path))
+            
+            if (path.Contains("://") || path.Contains(":///"))
             {
-                loadedWorkflow = JsonConvert.DeserializeObject<Dictionary<string, ComfyNode>>(File.ReadAllText(path));
+                UnityWebRequest www = UnityWebRequest.Get(path);
+                yield return www.SendWebRequest();
+                
+                if (www.result == UnityWebRequest.Result.Success)
+                {
+                    loadedWorkflow = JsonConvert.DeserializeObject<Dictionary<string, ComfyNode>>(www.downloadHandler.text);
+                }
+                else
+                {
+                    Debug.LogError($"Workflow file missing at: {path} \nError: {www.error}");
+                }
             }
             else
             {
-                Debug.LogError($"Workflow file missing at: {path}");
+                if (File.Exists(path))
+                {
+                    loadedWorkflow = JsonConvert.DeserializeObject<Dictionary<string, ComfyNode>>(File.ReadAllText(path));
+                }
+                else
+                {
+                    Debug.LogError($"Workflow file missing at: {path}");
+                }
             }
         }
 
@@ -124,13 +147,6 @@ namespace ComfyUIBridge
                 return;
             }
 
-            if (loadedWorkflow == null) LoadWorkflow();
-            if (loadedWorkflow == null)
-            {
-                onComplete?.Invoke();
-                return;
-            }
-
             StartCoroutine(ExecutionRoutine(onComplete));
         }
 
@@ -138,6 +154,17 @@ namespace ComfyUIBridge
         {
             isBusy = true;
             if (loadingSpinner != null) loadingSpinner.SetActive(true);
+
+            if (loadedWorkflow == null)
+            {
+                yield return StartCoroutine(LoadWorkflowRoutine());
+            }
+
+            if (loadedWorkflow == null)
+            {
+                Finish(onComplete);
+                yield break;
+            }
 
             // 1. UPLOADS
             foreach (var node in inputNodes)
