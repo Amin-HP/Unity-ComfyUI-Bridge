@@ -19,3 +19,9 @@ Runtime Queue system for managing multiple generation requests.
 RenderTexture input support.
 
 Automatic dependency installation (Newtonsoft.Json, glTFast).
+
+[0.1.1] - 2026-02-25
+
+Fixed
+
+Workflow loading on Android (using UnityWebRequest instead of File.ReadAllText).
