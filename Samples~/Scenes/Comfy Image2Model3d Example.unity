@@ -1285,7 +1285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307fdf440566b416da7dfb378a4f66e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workflowFileName: http://127.0.0.1:8188
+  workflowFileName: image2object3d.json
   expectedOutput: 1
   inputNodes:
   - type: 1
