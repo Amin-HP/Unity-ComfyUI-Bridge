@@ -145,14 +145,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44314294}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
@@ -229,17 +229,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 3
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_RenderingLayers: 1
   m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_ShadowRenderingLayers: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &311149273
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +541,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -543,6 +548,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &677989809
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +723,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -882,7 +889,7 @@ Animator:
   m_GameObject: {fileID: 977010656}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: df7e9ebbd6e3146039ea7a02ef40c1b6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 34f9ed25076f44ad0a5620808547c4a9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -914,7 +921,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ef528ba38529d4e45a2141f0ff33d799, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 63381ddaf97e6428381aaa2de60e79dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1027,6 +1034,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1180,10 +1188,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 311149274}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 330, y: -300}
-  m_SizeDelta: {x: 0, y: 600}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 600, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1707562425
 MonoBehaviour:
@@ -1219,7 +1227,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: cff08ee2304664bc58f8f724a434acca, type: 3}
+  m_Texture: {fileID: 2800000, guid: 0afc6b27fd9e742d4a0f8961b10b8708, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1267,10 +1275,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 311149274}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 990, y: -300}
-  m_SizeDelta: {x: 0, y: 600}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 600, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1890432595
 MonoBehaviour:
@@ -1330,8 +1338,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1957343389}
-  - component: {fileID: 1957343388}
-  - component: {fileID: 1957343387}
+  - component: {fileID: 1957343392}
+  - component: {fileID: 1957343391}
   - component: {fileID: 1957343390}
   m_Layer: 0
   m_Name: ComfyBridge
@@ -1340,98 +1348,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1957343387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1957343386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53b080e4a763045aea9e675244decf85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  workflowFileName: Image2image.json
-  expectedOutput: 0
-  inputNodes:
-  - type: 0
-    nodeID: 6
-    textValue: robot, realistic, neon, futuristic
-    randomizeSeed: 0
-    manualSeed: 0
-    steps: 0
-    cfg: 0
-    denoise: 0
-    width: 0
-    height: 0
-    audioSeconds: 0
-    inputImage: {fileID: 0}
-    inputRenderTexture: {fileID: 0}
-    uploadedServerFilename: 
-  - type: 0
-    nodeID: 7
-    textValue: 'watermark, text
-
-'
-    randomizeSeed: 1
-    manualSeed: 159395017730240
-    steps: 20
-    cfg: 8
-    denoise: 1
-    width: 0
-    height: 0
-    audioSeconds: 0
-    inputImage: {fileID: 2800000, guid: cff08ee2304664bc58f8f724a434acca, type: 3}
-    inputRenderTexture: {fileID: 0}
-    uploadedServerFilename: 
-  - type: 1
-    nodeID: 3
-    textValue: beautiful scenery nature glass bottle landscape, , purple galaxy bottle,
-    randomizeSeed: 1
-    manualSeed: 159395017730240
-    steps: 20
-    cfg: 8
-    denoise: 0.673
-    width: 0
-    height: 0
-    audioSeconds: 0
-    inputImage: {fileID: 0}
-    inputRenderTexture: {fileID: 0}
-    uploadedServerFilename: 
-  - type: 4
-    nodeID: 10
-    textValue: beautiful scenery nature glass bottle landscape, , purple galaxy bottle,
-    randomizeSeed: 1
-    manualSeed: 159395017730240
-    steps: 20
-    cfg: 8
-    denoise: 1
-    width: 0
-    height: 0
-    audioSeconds: 0
-    inputImage: {fileID: 2800000, guid: cff08ee2304664bc58f8f724a434acca, type: 3}
-    inputRenderTexture: {fileID: 0}
-    uploadedServerFilename: 
-  resultImage: {fileID: 1890432595}
-  resultAudio: {fileID: 0}
-  autoPlayAudio: 1
-  result3DSpawnPoint: {fileID: 0}
-  resultRenderTexture: {fileID: 0}
-  loadingSpinner: {fileID: 899907578}
---- !u!114 &1957343388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1957343386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a974dd941a464532917237945d510f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  comfyServerUrl: http://192.168.0.60:8188
 --- !u!4 &1957343389
 Transform:
   m_ObjectHideFlags: 0
@@ -1456,10 +1372,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1957343386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe52f2e6768f54ebda24a4756abad3cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 35fc006a0e24a47789f33b7e071bc07f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  executor: {fileID: 1957343387}
+  executor: {fileID: 1957343391}
   promptNodeID: 6
   samplerNodeID: 3
   promptsToRun:
@@ -1468,6 +1384,88 @@ MonoBehaviour:
   - A green alien landscape, 8k
   - A golden robot portrait, intricate details
   - A cyberpunk city street at night, neon lights
+--- !u!114 &1957343391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957343386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307fdf440566b416da7dfb378a4f66e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  workflowFileName: image2image.json
+  expectedOutput: 0
+  inputNodes:
+  - type: 0
+    nodeID: 6
+    textValue: 'photograph of victorian woman with wings, sky clouds, meadow grass
+
+'
+    randomizeSeed: 0
+    manualSeed: 0
+    steps: 0
+    cfg: 0
+    denoise: 0
+    width: 0
+    height: 0
+    audioSeconds: 0
+    inputImage: {fileID: 0}
+    inputRenderTexture: {fileID: 0}
+    uploadedServerFilename: 
+  - type: 4
+    nodeID: 10
+    textValue: 'photograph of victorian woman with wings, sky clouds, meadow grass
+
+'
+    randomizeSeed: 0
+    manualSeed: 0
+    steps: 0
+    cfg: 0
+    denoise: 0
+    width: 0
+    height: 0
+    audioSeconds: 0
+    inputImage: {fileID: 2800000, guid: 0afc6b27fd9e742d4a0f8961b10b8708, type: 3}
+    inputRenderTexture: {fileID: 0}
+    uploadedServerFilename: 
+  - type: 1
+    nodeID: 3
+    textValue: 'photograph of victorian woman with wings, sky clouds, meadow grass
+
+'
+    randomizeSeed: 1
+    manualSeed: 280823642470253
+    steps: 25
+    cfg: 8
+    denoise: 0.6
+    width: 0
+    height: 0
+    audioSeconds: 0
+    inputImage: {fileID: 2800000, guid: 0afc6b27fd9e742d4a0f8961b10b8708, type: 3}
+    inputRenderTexture: {fileID: 0}
+    uploadedServerFilename: 
+  resultImage: {fileID: 1890432595}
+  resultAudio: {fileID: 0}
+  autoPlayAudio: 1
+  result3DSpawnPoint: {fileID: 0}
+  resultRenderTexture: {fileID: 0}
+  loadingSpinner: {fileID: 899907578}
+--- !u!114 &1957343392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957343386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c8cb8d74da84b2896e475f73e586f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comfyServerUrl: http://127.0.0.1:8188
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

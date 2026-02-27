@@ -25,3 +25,14 @@ Automatic dependency installation (Newtonsoft.Json, glTFast).
 Fixed
 
 Workflow loading on Android (using UnityWebRequest instead of File.ReadAllText).
+
+[0.1.2] - 2026-02-27
+
+Changed
+
+Updated documentation to include setup instructions for the sample workflows, and fixed the issue of example scenes.
+
+Added
+
+Sample workflows for Text-to-Image, Image-to-Image, 3D Object, and Audio generation.
+

@@ -1,0 +1,161 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 621506145092317,
+      "steps": 20,
+      "cfg": 4,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "70",
+        0
+      ],
+      "positive": [
+        "78",
+        0
+      ],
+      "negative": [
+        "65",
+        1
+      ],
+      "latent_image": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "51": {
+    "inputs": {
+      "crop": "none",
+      "clip_vision": [
+        "54",
+        1
+      ],
+      "image": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "CLIPVisionEncode",
+    "_meta": {
+      "title": "CLIP Vision Encode"
+    }
+  },
+  "54": {
+    "inputs": {
+      "ckpt_name": "hunyuan3d-dit-v2-mv-turbo.safetensors"
+    },
+    "class_type": "ImageOnlyCheckpointLoader",
+    "_meta": {
+      "title": "Image Only Checkpoint Loader (img2vid model)"
+    }
+  },
+  "56": {
+    "inputs": {
+      "image": "hunyuanimage-30_black-fury-dragon.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "61": {
+    "inputs": {
+      "num_chunks": 8000,
+      "octree_resolution": 256,
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "54",
+        2
+      ]
+    },
+    "class_type": "VAEDecodeHunyuan3D",
+    "_meta": {
+      "title": "VAEDecodeHunyuan3D"
+    }
+  },
+  "65": {
+    "inputs": {
+      "front": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "Hunyuan3Dv2ConditioningMultiView",
+    "_meta": {
+      "title": "Hunyuan3Dv2ConditioningMultiView"
+    }
+  },
+  "66": {
+    "inputs": {
+      "resolution": 3072,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentHunyuan3Dv2",
+    "_meta": {
+      "title": "EmptyLatentHunyuan3Dv2"
+    }
+  },
+  "67": {
+    "inputs": {
+      "filename_prefix": "mesh/ComfyUI",
+      "image": "",
+      "mesh": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "SaveGLB",
+    "_meta": {
+      "title": "SaveGLB"
+    }
+  },
+  "70": {
+    "inputs": {
+      "shift": 1.0000000000000002,
+      "model": [
+        "54",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "78": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "FluxGuidance"
+    }
+  },
+  "83": {
+    "inputs": {
+      "algorithm": "surface net",
+      "threshold": 0.6,
+      "voxel": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "VoxelToMesh",
+    "_meta": {
+      "title": "VoxelToMesh"
+    }
+  }
+}
