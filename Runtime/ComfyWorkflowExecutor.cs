@@ -198,11 +198,17 @@ namespace ComfyUIBridge
                         string tempName = "unity_rt_" + System.Guid.NewGuid().ToString() + ".png";
 
                         RenderTexture currentRT = RenderTexture.active;
-                        RenderTexture.active = node.inputRenderTexture;
-                        Texture2D tempTex = new Texture2D(node.inputRenderTexture.width, node.inputRenderTexture.height, TextureFormat.RGB24, false);
-                        tempTex.ReadPixels(new Rect(0, 0, node.inputRenderTexture.width, node.inputRenderTexture.height), 0, 0);
+
+                        // Create a temporary sRGB render texture to ensure correct color space (gamma correction in Linear projects)
+                        RenderTexture tempRT = RenderTexture.GetTemporary(node.inputRenderTexture.width, node.inputRenderTexture.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.sRGB);
+                        Graphics.Blit(node.inputRenderTexture, tempRT);
+
+                        RenderTexture.active = tempRT;
+                        Texture2D tempTex = new Texture2D(tempRT.width, tempRT.height, TextureFormat.RGB24, false);
+                        tempTex.ReadPixels(new Rect(0, 0, tempRT.width, tempRT.height), 0, 0);
                         tempTex.Apply();
                         RenderTexture.active = currentRT;
+                        RenderTexture.ReleaseTemporary(tempRT);
 
                         ComfyManager.Instance.UploadImage(tempTex, tempName, (serverName) =>
                         {
