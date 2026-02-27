@@ -1,3 +1,5 @@
+![Project Banner](header.png)
+
 # **Unity ComfyUI Bridge**
 
 A robust, node-based integration tool that connects Unity to ComfyUI at runtime. This asset allows you to generate Images, 3D Models (GLB), and Audio, or manipulate RenderTextures directly inside your game or application using the ComfyUI API.
