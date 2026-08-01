@@ -129,3 +129,7 @@ public class ExampleGenerator : MonoBehaviour
 ## **License**
 
 \[MIT License\]
+
+## Support
+
+If this saved you some time, you can support the work here: **[Buy me a coffee](https://buymeacoffee.com/aminhp)**.
